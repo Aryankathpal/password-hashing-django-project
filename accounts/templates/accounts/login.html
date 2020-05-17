@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class=""  method="post">
+      {% csrf_token%}
+      {% bootstrap_form form %}
+      <input type="submit" name="" value="login">
+  </body>
+</html>
