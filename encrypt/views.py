@@ -12,7 +12,8 @@ from django.utils import timezone
 def encrypt(request):
     encrpyt_form=encodeForm(request.POST)
     if encrpyt_form.is_valid():
-        encodes = encode(id=request.POST['name'],password=request.POST['password'])
+        b = keyid.objects.get(user_id=request.user)
+        encodes = encode(id=b.keys,password=request.POST['password'])
         hash = encoded()
         hash.name = request.POST['name']
         hash.date= timezone.datetime.now()
