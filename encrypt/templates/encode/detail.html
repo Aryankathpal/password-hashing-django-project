@@ -1,0 +1,8 @@
+<h2>{{hash.name}}</h2>
+hash-{{hash.enc}}
+<h3>{{hash.date}}</h3>
+<input type="submit" name="" value="decrypt">
+<form  action="{% url 'encrypt:delete' hash.id %}" >
+  {%csrf_token%}
+  <input type="submit" name="" value="delete">
+</form>

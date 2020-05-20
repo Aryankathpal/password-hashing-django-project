@@ -1,0 +1,5 @@
+{% for hash in hash.all %}
+<h2><a href="{% url 'encrypt:detail' hash.id %}">{{hash.name}}</a></h2>
+{{hash.date}}
+<br />
+{% endfor %}

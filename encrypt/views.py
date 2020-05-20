@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.http import HttpResponse
 from .models import encoded
 from .forms import encodeForm
@@ -10,6 +10,8 @@ from django.utils import timezone
 # Create your views here.
 @login_required
 def encrypt(request):
+    hashs=''
+    hashsm=''
     encrpyt_form=encodeForm(request.POST)
     if encrpyt_form.is_valid():
         b = keyid.objects.get(user_id=request.user)
@@ -21,6 +23,26 @@ def encrypt(request):
         hash.hasher = request.user
         if hash.enc!='password maximum length is 15':
             hash.save()
-        return HttpResponse(encodes)
+            hashs=hash.enc
+        else:
+            hashsm = 'password maximum length is 15'
         # redirect('encrpyt')
-    return render(request,'encode/encode.html',{'encrpyt_form':encrpyt_form})
+    return render(request,'encode/encode.html',{'encrpyt_form':encrpyt_form,'hashs':hashs,'hashsm':hashsm})
+
+@login_required
+def enlist(request):
+    hash=encoded.objects.filter(hasher_id=request.user)
+    return render(request,'encode/enlist.html',{'hash':hash})
+
+@login_required
+def detail(request,hasher_id):
+    hash=get_object_or_404(encoded,pk=hasher_id)
+    return render(request,'encode/detail.html',{'hash':hash})
+
+@login_required
+def delete_it(request,hasher_id):
+    hash=get_object_or_404(encoded,pk=hasher_id)
+    if request.method=='POST':
+        hash.delete()
+        return redirect('encrypt:enlist')
+    return render(request, 'encode/delete.html',{'hash':hash})

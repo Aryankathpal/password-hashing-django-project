@@ -8,5 +8,12 @@
   <input type="submit" name="" value="encrypt">
 
 </form>
-{{encodes}}
+<br />
+{% if hashs %}
+<h3>your encrpyted password is : </h3>
+{{hashs}}
+{% else %}
+{{ hashsm }}
+{% endif %}
+
 {% endblock %}

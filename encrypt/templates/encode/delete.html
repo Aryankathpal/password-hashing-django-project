@@ -1,0 +1,9 @@
+are you sure you want to delete {{hash.name}}
+<form  method="post">
+  {% csrf_token %}
+  <input type="submit" name="" value="yes">
+</form>
+<form  action="{% url 'encrypt:enlist' %}" >
+  {% csrf_token %}
+  <input type="submit" name="" value="cancel">
+</form>
