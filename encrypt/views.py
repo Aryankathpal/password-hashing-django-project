@@ -12,6 +12,7 @@ from django.utils import timezone
 def encrypt(request):
     hashs=''
     hashsm=''
+    hashsm1=''
     encrpyt_form=encodeForm(request.POST)
     if encrpyt_form.is_valid():
         b = keyid.objects.get(user_id=request.user)
@@ -25,7 +26,7 @@ def encrypt(request):
             hash.save()
             hashs=hash.enc
         else:
-            hashsm = 'password maximum length is 15'
+            hashsm = 'password maximum length is 15 and encryption support only !@.$#:%,&*;-_ these special charactors'
         # redirect('encrpyt')
     return render(request,'encode/encode.html',{'encrpyt_form':encrpyt_form,'hashs':hashs,'hashsm':hashsm})
 
