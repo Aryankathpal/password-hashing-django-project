@@ -11,7 +11,13 @@ def signup(request):
     form2=keyForm(request.POST)
     if form.is_valid():
             user = User.objects.create_user(username=request.POST['username'],email=request.POST['email'],password=request.POST['password1'])
-            form = keyid.objects.get_or_create(user=user,keys=generate())[0]
+            def id():
+                key = generate()
+                if keyid.objects.filter(keys=key).exists():
+                    return id()
+                else:
+                    return key
+            form = keyid.objects.get_or_create(user=user,keys=id())[0]
             user=form.save()
             return redirect('home')
     else:
@@ -24,6 +30,7 @@ def generate():
     for i in range(5):
         a=random.randrange(0,10)
         id+=str(a)
+
     return id
 
 
