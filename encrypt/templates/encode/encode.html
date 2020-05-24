@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 {% extends 'accounts/base.html' %}
+{%load static%}
 {% load bootstrap4 %}
-{% block content %}
-<form method="post">
-  {% csrf_token %}
-  {% bootstrap_form encrpyt_form %}
-  <input type="submit" name="" value="encrypt">
 
-</form>
+{% block content %}
+<head>
+  <link rel="stylesheet" href="{% static 'encrypt/encode.css' %}">
+</head>
+<h1>Encrypt</h1>
+<br />
+<div class="form">
+
+  <form class="form-signin" method="post">
+    {% csrf_token %}
+    {% bootstrap_form encrpyt_form %}
+    <input type="submit" class="btn btn-primary btn-lg" id=s1 value="encrypt">
+
+  </form>
+</div>
+
+</div>
 <br />
 {% if hashs %}
-<h3>your encrpyted password is : </h3>
+<h3> encrpyted password is : </h3>
 {{hashs}}
 {% else %}
-{{ hashsm }}
+<b>{{ hashsm }}</b>
 {% endif %}
 
 {% endblock %}

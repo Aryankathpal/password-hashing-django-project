@@ -27,10 +27,12 @@ def signup(request):
 
 def generate():
     id=''
-    for i in range(5):
-        a=random.randrange(0,10)
-        id+=str(a)
-
+    for i in range(4):
+        a=random.randrange(65,91)
+        c=chr(a)
+        id+=c
+    d=random.randrange(0,10)
+    id+=str(d)
     return id
 
 

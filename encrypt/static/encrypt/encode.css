@@ -1,0 +1,28 @@
+
+body{
+  text-align: center;
+  align-items: center;
+  background-color: white;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding-top: 15px;
+  margin: auto;
+}
+
+.form-signin input[type=text]{
+  padding: 25px;
+}
+h1{
+  margin-top: 20px;
+}
+#s1{
+  margin-top: 5px;
+  background-color: #7952b3	;
+  border-color:#7952b3	;
+}
+label{
+  font-weight: bold;
+
+}

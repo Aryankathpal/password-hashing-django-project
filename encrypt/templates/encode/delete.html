@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+{% extends 'accounts/base.html' %}
+{% load bootstrap4 %}
+{% block content %}
 are you sure you want to delete {{hash.name}}
 <form  method="post">
   {% csrf_token %}
@@ -7,3 +11,4 @@ are you sure you want to delete {{hash.name}}
   {% csrf_token %}
   <input type="submit" name="" value="cancel">
 </form>
+{%endblock%}

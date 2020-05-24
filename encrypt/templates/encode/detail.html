@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+{% extends 'accounts/base.html' %}
+{% load bootstrap4 %}
+{% block content %}
+
 <h2>{{hash.name}}</h2>
 hash-{{hash.enc}}
 <h3>{{hash.date}}</h3>
@@ -9,3 +14,4 @@ hash-{{hash.enc}}
   {%csrf_token%}
   <input type="submit" name="" value="delete">
 </form>
+{%endblock%}

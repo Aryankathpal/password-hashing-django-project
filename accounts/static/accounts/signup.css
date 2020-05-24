@@ -1,0 +1,64 @@
+body {
+  text-align: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+.text-muted{
+  color:transparent!important;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding-top: 95px;
+  margin: auto;
+}
+#nav{
+  background-color: #7952b3;
+}
+h1{
+  margin-top: 30px;
+}
+label{
+  color:transparent;
+}
+.form-control.is-invalid{
+  display: block;
+  border: 1px solid #ced4da;
+
+}
+.form-control.is-invalid[type=text]{
+  margin-top: -100px;
+  padding: 23px;
+}
+.form-control.is-invalid[type=email]{
+  margin-top: -75px;
+  padding: 23px;
+}
+.form-control.is-invalid[type=password]{
+  margin-top: -33px;
+  padding: 23px;
+}
+.form-control.is-valid[type=text]{
+  margin-top: -100px;
+  padding: 23px;
+}
+.form-control.is-valid[type=email]{
+  margin-top: -75px;
+  padding: 23px;
+}
+.form-control.is-valid[type=password]{
+  margin-top: -33px;
+  padding: 23px;
+}
+#id_password2.form-control.is-invalid{
+  margin-top:-150px;
+}
+#id_password2.form-control.is-valid{
+  margin-top:-150px;
+}
+#s1{
+  width:30%;
+    background-color: #7952b3	;
+    border-color:#7952b3;
+    margin-top: -39px;
+}
