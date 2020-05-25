@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 {% extends 'accounts/base.html' %}
 {% load bootstrap4 %}
+{% load static %}
 {% block content %}
+<head>
+  <link rel="stylesheet" href="{% static 'encrypt/enlist.css' %}">
+</head>
+<h2 id=count>Total password : {{hash.count}}</h2>
+<br />
 {% for hash in hash.all %}
+<div class="name">
 <h2><a href="{% url 'encrypt:detail' hash.id %}">{{hash.name}}</a></h2>
-{{hash.date}}
+</div>
+<div class="date">
+  {{hash.date}}
+</div>
 <br />
 {% endfor %}
 {%endblock%}

@@ -2,16 +2,19 @@
 {% extends 'accounts/base.html' %}
 {% load bootstrap4 %}
 {% block content %}
-
-<h2>{{hash.name}}</h2>
-hash-{{hash.enc}}
-<h3>{{hash.date}}</h3>
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static "encrypt/detail.css" %}">
+</head>
+<h1 class='name'>{{hash.name}}</h1>
+<h5 class='hash'>Password - {{hash.enc}}</h5>
+<h3 class='date'>{{hash.date}}</h3>
 <form action="{% url 'decrypt:endecrypt' hash.id %}">
-  <input type="submit" name="" value="decrypt">
+  <input type="submit" class="btn btn-primary" id='button1' value="decrypt">
 </form>
 
 <form  action="{% url 'encrypt:delete' hash.id %}" >
   {%csrf_token%}
-  <input type="submit" name="" value="delete">
+  <input type="submit" class="btn btn-primary"id='button2' value="delete">
 </form>
 {%endblock%}

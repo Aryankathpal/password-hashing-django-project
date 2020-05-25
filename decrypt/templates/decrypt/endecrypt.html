@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 {% extends 'accounts/base.html' %}
 {% load bootstrap4 %}
+{% load static%}
 {% block content %}
-{{hash}}
+<head>
+  <link rel="stylesheet" href="{% static 'decrypt/endecrypt.css' %}">
+</head>
+<h1 class='name'>{{hash.name}}</h1>
+<h5 class='hash'>Encrypted Password - {{hash.enc}}</h5>
+<h3 class='date'>{{hash.date}}</h3>
+<h3 class='pass'>Original Password - <span class='hash1'>{{hash1}}</span></h3>
 {% endblock%}

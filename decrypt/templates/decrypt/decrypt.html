@@ -1,10 +1,16 @@
 {% extends 'accounts/base.html' %}
 {% load bootstrap4 %}
+{% load static %}
 {% block content %}
-<form  method="post">
+<head>
+  <link rel="stylesheet" href="{% static 'decrypt/decrypt.css' %}">
+</head>
+<form class='form-signin' method="post">
   {% csrf_token %}
   {% bootstrap_form decrypt_form%}
-  <input type="submit" name="" value="decrypt">
+  <input type="submit" class="btn btn-primary btn-lg" id='s1' value="decrypt">
 </form>
-{{hash}}
+
+<h2>{{hash}}</h2>
+
 {% endblock %}
