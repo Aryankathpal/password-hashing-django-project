@@ -27,6 +27,7 @@ label{
 .form-control.is-invalid[type=text]{
   margin-top: 10px;
   padding: 23px;
+  background-image: none;
 }
 #s1{
   background-color:#ffaa00;
@@ -35,4 +36,8 @@ label{
 h2{
   margin-top: 35px;
   color: green;
+}
+.form-control.is-valid,.form-control.is-invalid{
+  background-image: none;
+  border-color: #ced4da;
 }

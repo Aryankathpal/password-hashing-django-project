@@ -25,3 +25,7 @@ h1{
 label{
   font-weight: bold;
 }
+.form-control.is-valid,.form-control.is-invalid{
+  background-image: none;
+  border-color: #ced4da;
+}

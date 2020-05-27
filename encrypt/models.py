@@ -7,7 +7,7 @@ class encoded(models.Model):
     hasher=models.ForeignKey(User,on_delete=models.CASCADE,null=False)
     name=models.CharField(max_length=50)
     date=models.DateTimeField(default=now,blank=True)
-    password = models.CharField(max_length=50)
+    password = models.CharField(max_length=15)
     enc = models.CharField(max_length=100)
 
     def __str__(self):

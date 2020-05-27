@@ -38,3 +38,6 @@ def generate():
 
 class home(TemplateView):
     template_name='accounts/home.html'
+
+class conditions(TemplateView):
+    template_name='accounts/t&c.html'

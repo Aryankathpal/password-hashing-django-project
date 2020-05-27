@@ -26,7 +26,7 @@ def encrypt(request):
             hash.save()
             hashs=hash.enc
         else:
-            hashsm = 'password maximum length is 15 and encryption support only !@.$#:%,&*;-_ these special charactors'
+            hashsm = 'encryption support only !@.$#:%,&*;-_ these special charactors'
         # redirect('encrpyt')
     return render(request,'encode/encode.html',{'encrpyt_form':encrpyt_form,'hashs':hashs,'hashsm':hashsm})
 

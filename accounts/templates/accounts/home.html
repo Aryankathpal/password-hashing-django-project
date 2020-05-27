@@ -2,5 +2,35 @@
 {% extends 'accounts/base.html' %}
 {% load static%}
 {%block content%}
-<h1>wlcome</h1>
+<head>
+  <link rel="stylesheet" href="{% static 'accounts/homee.css'%}">
+</head>
+  <img src="{% static 'accounts/home.png' %}" class='img' alt="">
+
+<div class="home">
+  <h2><b>What is KathLock ?</b></h2>
+  <br />
+  <h4>KathLock is a platform to encrypt your passwords. it helps you to secure your passwords by encrypting into a secure hash, KathLock hashing algorythm contains many security and stealth features for it to be the best hashing algorythm</h4>
+  <br />
+  <br />
+  <h4>Try it!</h4>
+  <form  action="{% url 'accounts:signup' %}" method="post">
+    {%csrf_token%}
+      <input type="submit" class="btn btn-primary btn-lg" id='s1' value="Sign up">
+  </form>
+
+</div>
+
+<div class="safe">
+
+<h3><b>How secure is KathLock hashing algorythm ?</b></h3>
+<br />
+<ul>
+  <li>KathLock use its own hashing algorythm,so decryption of hash is not possible anywhere.</li>
+  <li>You will get a unique hash for the same password everytime.</li>
+  <li>The length of the hash is fixed for every password</li>
+  <li>KathLock's hash can only be decrypted on the hash owner's account</li>
+  <li>We do not store your plain text password anywhere</li>
+</ul>
+</div>
 {%endblock%}

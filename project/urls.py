@@ -15,11 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from accounts.views import home
+from accounts.views import home,conditions
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home.as_view(),name='home'),
+    path('terms&conditions/',conditions.as_view(),name='conditions'),
     path('accounts/',include('accounts.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
     path('encrypt/',include('encrypt.urls')),

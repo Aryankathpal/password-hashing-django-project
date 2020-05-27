@@ -1,3 +1,4 @@
+
 body {
   text-align: center;
   align-items: center;
@@ -60,5 +61,8 @@ label{
   width:30%;
     background-color: #ffaa00	;
     border-color:#ffaa00;
-    margin-top: -39px;
+    margin-top: 15px;
+}
+.check{
+  margin-top: -50px;
 }
