@@ -143,3 +143,8 @@ SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
