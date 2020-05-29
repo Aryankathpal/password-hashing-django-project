@@ -4,7 +4,7 @@ from .models import encoded
 from .forms import encodeForm
 from accounts.models import keyid
 from django.contrib.auth.models import User
-from .hash.encode import encode
+from .hash1.encode import encode
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 # Create your views here.

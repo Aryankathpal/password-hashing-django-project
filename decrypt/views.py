@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from accounts.models import keyid
 from .forms import decrypt
 from django.contrib.auth.decorators import login_required
-from .hash.decode import hashcode
+from .hash1.decode import hashcode
 from encrypt.models import encoded
 
 # Create your views here.
