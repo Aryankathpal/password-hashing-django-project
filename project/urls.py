@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from accounts.views import home,conditions
-
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home.as_view(),name='home'),
@@ -25,4 +25,4 @@ urlpatterns = [
     path('accounts/',include('django.contrib.auth.urls')),
     path('encrypt/',include('encrypt.urls')),
     path('decrypt/',include('decrypt.urls')),
-]
+]+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

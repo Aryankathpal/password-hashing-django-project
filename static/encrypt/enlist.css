@@ -1,0 +1,20 @@
+#count{
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.name{
+  margin-left: 30px;
+  margin-top: 5px;
+}
+.date{
+  margin-left: 30px;
+}
+body{
+  background-color: #f5f5f5;
+}
+a{
+  color: #a66ce0;
+}
+a:hover{
+  color:#62279c;
+}
