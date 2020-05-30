@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path,include
 from accounts.views import home,conditions
 from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',home.as_view(),name='home'),
