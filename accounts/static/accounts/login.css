@@ -51,3 +51,7 @@ label{
   background-color: #ffaa00	;
   border-color:#ffaa00;
 }
+.form-control.is-valid,.form-control.is-invalid{
+  background-image: none;
+  border-color: #ced4da;
+}
