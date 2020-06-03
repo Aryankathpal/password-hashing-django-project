@@ -12,6 +12,7 @@ body {
   max-width: 330px;
   padding-top: 95px;
   margin: auto;
+
 }
 #nav{
   background-color: #7952b3;
@@ -26,6 +27,10 @@ label{
   display: block;
   border: 1px solid #ced4da;
 
+}
+.form-control.is-valid{
+  background-image: none;
+  border-color: #ced4da;
 }
 .form-control.is-invalid[type=text]{
   margin-top: -100px;
@@ -65,4 +70,10 @@ label{
 }
 .check{
   margin-top: -50px;
+}
+.message{
+  background-position: center;
+  background-color: #fff2ac;
+  background-image: linear-gradient(to right,#ffe359 0%,#fff2ac 100%);
+
 }

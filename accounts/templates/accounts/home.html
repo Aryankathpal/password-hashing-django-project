@@ -14,19 +14,21 @@
   <br />
   <br />
   <h4>Try it!</h4>
+  {%if user.is_authenticated%}
+  {%else%}
   <form  action="{% url 'accounts:signup' %}" method="post">
     {%csrf_token%}
       <input type="submit" class="btn btn-primary btn-lg" id='s1' value="Sign up">
   </form>
-
+  {% endif %}
 </div>
 
 <div class="safe">
 
-<h3><b>How secure is KathLock hashing algorythm ?</b></h3>
+<h3><b>How secure is KathLock hashing algorithm ?</b></h3>
 <br />
 <ul>
-  <li>KathLock use its own hashing algorythm,so decryption of hash is not possible anywhere.</li>
+  <li>KathLock use its own hashing algorithm,so decryption of hash is not possible anywhere.</li>
   <li>You will get a unique hash for the same password everytime.</li>
   <li>The length of the hash is fixed for every password</li>
   <li>KathLock's hash can only be decrypted on the hash owner's account</li>

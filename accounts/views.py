@@ -4,6 +4,7 @@ from .forms import UserForm,keyForm
 from django.contrib.auth import login,authenticate
 from .models import keyid
 from django.contrib.auth.models import User
+from django.contrib import messages
 import random
 # Create your views here.
 def signup(request):
@@ -19,7 +20,8 @@ def signup(request):
                     return key
             form = keyid.objects.get_or_create(user=user,keys=id())[0]
             user=form.save()
-            return redirect('home')
+            messages.info(request,'Signed up successfully')
+            return redirect('accounts:signup')
     else:
         (form.errors,form2.errors)
 

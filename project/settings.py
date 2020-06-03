@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'datahash',
-        'USER':'kathlock',
-        'PASSWORD':'aryankathpal',
+        'USER':'postgres',
+        'PASSWORD':'namethearyan08',
         'HOST':'localhost',
         'PORT':'5432',
     }
@@ -138,7 +138,7 @@ STATICFILES_DIR=[
 STATIC_ROOT
 ]
 
-SESSION_EXPIRE_SECONDS = 300
+SESSION_EXPIRE_SECONDS = 600
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 
 LOGIN_REDIRECT_URL = 'home'
