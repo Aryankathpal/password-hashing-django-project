@@ -3,10 +3,14 @@
 {% load static%}
 {%block content%}
 <head>
-  <link rel="stylesheet" href="{% static 'accounts/homee.css'%}">
+  <link rel="stylesheet" href="{% static 'accounts/home.css'%}">
 </head>
+{% if user.is_authenticated %}
+<div class="log">
+  <h5>Logged in successfully</h5>
+</div>
+{%endif%}
   <img src="{% static 'accounts/home.png' %}" class='img' alt="">
-
 <div class="home">
   <h2><b>What is KathLock ?</b></h2>
   <br />
@@ -34,5 +38,35 @@
   <li>KathLock's hash can only be decrypted on the hash owner's account</li>
   <li>We do not store your plain text password anywhere</li>
 </ul>
+</div>
+<div class="tut">
+  <h3><b>How to encrypt ?</b></h3>
+  <br />
+  <h5>Go to the encrypt page.</h5>
+  <img src="{% static 'accounts/1.png' %}" class='tutpic' alt="">
+  <br />
+    <br />
+    <h5>Enter the name of the Passsword.</h5>
+    <h5>Enter the Passsword you want to encrypt.</h5>
+    <h5>Click on encrypt.</h5>
+  <img src="{% static 'accounts/2.png' %}" class='tutpic' alt="">
+    <br />
+      <br />
+    <h5>You will get your hash.</h5>
+    <h5>it is automatically saved in your "my hash", you can decrypt it or delete from there.</h5>
+  <img src="{% static 'accounts/3.png' %}" class='tutpic' alt="">
+    <br />
+      <br />
+    <h3><b>How to decrypt ?</b></h3>
+    <br />
+    <h5>Go to the decrypt page.</h5>
+  <img src="{% static 'accounts/1.1.png' %}" class='tutpic' alt="">
+  <br />
+    <br />
+  <h5>Enter your encrypted password.</h5>
+  <h5>Click on decrypt.</h5>
+  <img src="{% static 'accounts/4.png' %}" class='tutpic' alt="">
+    <br />
+    <h5>Note: you can decrypt your passwords directly from "my hash"</h5>
 </div>
 {%endblock%}

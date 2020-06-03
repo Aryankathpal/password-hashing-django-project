@@ -26,3 +26,21 @@ body{
     border-color:#ffaa00;
     margin-top: 5px;
 }
+.log{
+  background-position: center;
+  background-color: #fff2ac;
+  background-image: linear-gradient(to right,#ffe359 0%,#fff2ac 100%);
+  text-align: center;
+  padding: 5px;
+}
+.tutpic{
+  height: 350px;
+  width:650px;
+  border: solid 1px;
+  margin-bottom: 40px;
+    font-family: '';font-size: 22px;
+}
+.tut{
+  margin-left: 80px;
+
+}
