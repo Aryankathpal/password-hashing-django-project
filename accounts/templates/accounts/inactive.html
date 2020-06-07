@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'accounts/base.html' %}
+{% load static%}
+{%block content%}
+<head>
+  <link rel="stylesheet" href="{% static 'accounts/inactive.css' %}">
+</head>
+<h2>Signed up successfully</h2>
+<h3>A verification link is sent to your registered email address</h3>
+<h3>please confirm it to activate your account. </h3>
+
+{%endblock%}

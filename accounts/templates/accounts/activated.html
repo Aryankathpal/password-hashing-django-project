@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'accounts/base.html' %}
+{% load static%}
+{%block content%}
+<head>
+  <link rel="stylesheet" href="{%static 'accounts/activated.css'%}">
+</head>
+<h1>Account activated</h1>
+<form class="form" action="{% url 'accounts:login' %}" method="post">
+    {%csrf_token%}
+    <label for="login"><h2>Please Login  </h2></label>
+    <input type="submit" name='login' class="btn btn-primary btn-lg" id='s1' value="Login">
+
+</form>
+{%endblock%}

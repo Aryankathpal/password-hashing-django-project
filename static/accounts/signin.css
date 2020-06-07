@@ -23,10 +23,9 @@ h1{
 label{
   color:transparent;
 }
-.form-control.is-invalid{
-  display: block;
-  border: 1px solid #ced4da;
-
+.form-control.is-valid,.form-control.is-invalid{
+  background-image: none;
+  border-color: #ced4da;
 }
 .form-control.is-valid{
   background-image: none;
